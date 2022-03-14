@@ -145,7 +145,7 @@ a {
   text-decoration: none;
 }
 
-.footer div ul, .footer div p, .gift-cards .content-column p, section .content .content-column:last-child a, header nav ul {
+.footer div ul, .footer div p, .exhibition .exhibition-info .content-text a, .gift-cards .content-column p, section .content .content-column:last-child a, header nav ul {
   font-family: "Montserrat";
   font-weight: 500;
   font-size: 10px;
@@ -162,7 +162,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto Slab", serif;
   width: 100vw;
-  height: 300vh;
+  height: 400vh;
 }
 body > *:not(.footer) {
   padding: 0px 140px;
@@ -247,7 +247,8 @@ section .content .content-column:last-child a:hover {
   background-color: white;
 }
 
-.discover {
+.discover,
+.exhibition-info {
   background-color: #f3ede7;
 }
 
@@ -290,6 +291,56 @@ section .content .content-column:last-child a:hover {
 }
 .photos img:hover {
   opacity: 0.5;
+}
+
+.exhibition {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 60vh);
+}
+.exhibition .exhibition-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 60vh);
+}
+.exhibition .exhibition-info:nth-child(even) .content-img {
+  order: 1;
+}
+.exhibition .exhibition-info .content-img img {
+  width: 100%;
+  height: 100%;
+}
+.exhibition .exhibition-info .content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 100px;
+  text-align: center;
+}
+.exhibition .exhibition-info .content-text h3 {
+  font-family: Roboto Slab;
+  font-size: 28px;
+  color: #414141;
+  font-weight: 100;
+  line-height: 36px;
+  margin-bottom: 80px;
+}
+.exhibition .exhibition-info .content-text a {
+  border: 1px solid #414141;
+  padding: 20px 50px;
+  transition: background 0.3s linear;
+}
+.exhibition .exhibition-info .content-text a:hover {
+  background-color: white;
+}
+
+.divide {
+  display: block;
+  height: 400px;
 }
 
 .footer {
